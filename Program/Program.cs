@@ -35,13 +35,21 @@ string[] CheckSymbol(string[] stringArray)
     return res;
 }
 
-
-
-
+void printA(string[] stringArray)
+{
+    Console.Write("[");
+    for (int i = 0; i < stringArray.Length; i++)
+    {
+        Console.Write($"‘{ stringArray[i]}’, ");
+}
+Console.Write("]");
+}
 
 
 Console.Write("Введите количество элементов массива: ");
 int m = int.Parse(Console.ReadLine()!);
 string[] stringArray = new string[m];
 
+FillArray(stringArray);
+printA(CheckSymbol(stringArray));
 
