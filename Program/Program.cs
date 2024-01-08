@@ -14,6 +14,27 @@ void FillArray(string[] stringArray)
     }
 }
 
+string[] CheckSymbol(string[] stringArray)
+{
+    int n = 0;
+    for (int i = 0; i < stringArray.Length; i++)
+    {
+        if (stringArray[i].Length <= 3)
+            n++;
+    }
+    string[] res = new string[n];
+    int j = 0;
+    for (int i = 0; i < stringArray.Length; i++)
+    {
+        if (stringArray[i].Length <= 3)
+        {
+            res[j] = stringArray[i];
+            j++;
+        }
+    }
+    return res;
+}
+
 
 
 
